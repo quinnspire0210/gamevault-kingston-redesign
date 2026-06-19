@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — Game Vault Kingston</title>
+  <meta name="description" content="Browse games, consoles, accessories and collectibles in stock at Game Vault Kingston.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="index.html" aria-label="Game Vault Kingston home">
+        <img src="img/logo-dark.png" alt="">
+        <span class="brand__type">Game Vault</span>
+      </a>
+      <nav class="nav" id="nav-menu" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn header-cta">Visit the vault</a>
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- PAGE HEAD -->
+    <section class="page-head">
+      <div class="shell">
+        <p class="crumbs"><a href="index.html">Home</a> / Shop</p>
+        <h1>The shop floor</h1>
+        <p>Restocked weekly with retro classics, current releases, and the gear in between. Reserve in store or come browse the shelves.</p>
+      </div>
+    </section>
+
+    <!-- CATEGORY CARDS -->
+    <section class="section">
+      <div class="shell">
+        <div class="sec-head reveal">
+          <span class="tag">Shop by category</span>
+        </div>
+        <div class="product-grid">
+          <article class="card reveal">
+            <div class="card__media"><img src="img/product-1.jpg" alt="Stack of video game cases"></div>
+            <h3>Games</h3><p>Retro to brand new across every major platform.</p>
+            <div class="card__foot"><span class="price"><span class="from">From</span>$19.89</span><a href="#catalogue" class="btn">View</a></div>
+          </article>
+          <article class="card reveal">
+            <div class="card__media"><img src="img/product-2.jpg" alt="Gaming console"></div>
+            <h3>Consoles</h3><p>Tested retro systems and current-gen hardware.</p>
+            <div class="card__foot"><span class="price"><span class="from">From</span>$25.99</span><a href="#catalogue" class="btn">View</a></div>
+          </article>
+          <article class="card reveal">
+            <div class="card__media"><img src="img/product-3.jpg" alt="Gaming collectible figures"></div>
+            <h3>Collectibles</h3><p>Figures, merch, and display pieces for fans.</p>
+            <div class="card__foot"><span class="price"><span class="from">From</span>$42.99</span><a href="#catalogue" class="btn">View</a></div>
+          </article>
+          <article class="card reveal">
+            <div class="card__media"><img src="img/product-4.jpg" alt="Gaming accessories"></div>
+            <h3>Accessories</h3><p>Controllers, cables, and everything to finish the setup.</p>
+            <div class="card__foot"><span class="price"><span class="from">From</span>$15.99</span><a href="#catalogue" class="btn">View</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOGUE LIST -->
+    <section class="section section--paper2" id="catalogue">
+      <div class="shell">
+        <div class="sec-head sec-head--split reveal">
+          <div>
+            <span class="tag tag--cyan">Live inventory</span>
+            <h2>Games catalogue</h2>
+          </div>
+          <p class="lede">A snapshot of what's on the shelves this week. In-store quantities change fast.</p>
+        </div>
+
+        <div class="filters reveal" role="group" aria-label="Filter catalogue">
+          <button class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="retro" aria-pressed="false">Retro</button>
+          <button class="chip" data-filter="modern" aria-pressed="false">Modern</button>
+          <button class="chip" data-filter="console" aria-pressed="false">Consoles</button>
+        </div>
+
+        <div class="catalogue reveal">
+          <div class="cat-row" data-cat="modern">
+            <h3>The Last of Us II Remaster</h3>
+            <div class="cat-meta"><b>Genre</b>Adventure / Shooter</div>
+            <div class="cat-meta"><b>Platform</b>PS5</div>
+            <span class="price">$49.99</span>
+          </div>
+          <div class="cat-row" data-cat="modern">
+            <h3>Assassin's Creed Shadows</h3>
+            <div class="cat-meta"><b>Genre</b>Action / RPG</div>
+            <div class="cat-meta"><b>Platform</b>PS5 · Xbox · PC</div>
+            <span class="price">$59.99</span>
+          </div>
+          <div class="cat-row" data-cat="retro">
+            <h3>Sonic X Shadow Generations</h3>
+            <div class="cat-meta"><b>Genre</b>Platformer</div>
+            <div class="cat-meta"><b>Platform</b>Switch</div>
+            <span class="price">$34.99</span>
+          </div>
+          <div class="cat-row" data-cat="modern">
+            <h3>Final Fantasy VII Rebirth</h3>
+            <div class="cat-meta"><b>Genre</b>Action / RPG</div>
+            <div class="cat-meta"><b>Platform</b>PS5 · PC</div>
+            <span class="price">$54.99</span>
+          </div>
+          <div class="cat-row" data-cat="retro">
+            <h3>Stray</h3>
+            <div class="cat-meta"><b>Genre</b>Adventure</div>
+            <div class="cat-meta"><b>Platform</b>Multi</div>
+            <span class="price">$24.99</span>
+          </div>
+          <div class="cat-row" data-cat="console">
+            <h3>Retro Console Bundle</h3>
+            <div class="cat-meta"><b>Type</b>Tested hardware</div>
+            <div class="cat-meta"><b>Includes</b>2 controllers</div>
+            <span class="price">$129.99</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="cta-band">
+      <div class="shell cta-band__inner reveal">
+        <div>
+          <p class="cta-band__meta">Can't find it? We'll hunt it down.</p>
+          <h2>Looking for something rare? Put it on the want list.</h2>
+        </div>
+        <a href="contact.html" class="btn">Ask the team</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="Game Vault Kingston">
+          <p>Kingston's local vault for retro and modern gaming. Buy, sell, trade, repair.</p>
+          <div class="socials">
+            <a href="#" aria-label="WhatsApp"><img src="img/social media icons/social-icon-phone.png" alt=""></a>
+            <a href="#" aria-label="Facebook"><img src="img/social media icons/social-icon-facebook.png" alt=""></a>
+            <a href="#" aria-label="Instagram"><img src="img/social media icons/social-icon-instagram.png" alt=""></a>
+            <a href="#" aria-label="Reddit"><img src="img/social media icons/social-icon-reddit.png" alt=""></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Store hours</h3>
+          <p>Mon–Fri · 10am to 8pm</p>
+          <p>Sat–Sun · 11am to 6pm</p>
+          <h3 style="margin-top:1.5rem;">Visit</h3>
+          <p>1234 Road St, Kingston, ON</p>
+        </div>
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+          <h3 style="margin-top:1.5rem;">Reach us</h3>
+          <a href="mailto:info@gamevaultkingston.com">info@gamevaultkingston.com</a>
+          <a href="tel:+11234567890">(123) 456-7890</a>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© 2025 Game Vault Kingston. All rights reserved.</span>
+        <span>Concept site · Designed in Kingston</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

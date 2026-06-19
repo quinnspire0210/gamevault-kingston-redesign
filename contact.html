@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Game Vault Kingston</title>
+  <meta name="description" content="Get in touch with Game Vault Kingston. Visit us in store, call, or send a message.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="index.html" aria-label="Game Vault Kingston home">
+        <img src="img/logo-dark.png" alt="">
+        <span class="brand__type">Game Vault</span>
+      </a>
+      <nav class="nav" id="nav-menu" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact-form" class="btn header-cta">Send a message</a>
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="shell">
+        <p class="crumbs"><a href="index.html">Home</a> / Contact</p>
+        <h1>Drop us a line</h1>
+        <p>Questions about a trade-in, a repair, or a rare title? Reach the team or stop by the shop.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell contact__grid">
+        <div class="contact__info reveal">
+          <span class="tag">Find us</span>
+          <h2>Visit the vault</h2>
+          <p>We're open seven days a week. Walk-ins always welcome, no appointment needed for trade-ins.</p>
+          <div class="contact__detail"><span>Address</span><span>1234 Road St, Kingston, ON</span></div>
+          <div class="contact__detail"><span>Email</span><span>info@gamevaultkingston.com</span></div>
+          <div class="contact__detail"><span>Phone</span><span>(123) 456-7890</span></div>
+          <div class="contact__detail"><span>Hours</span><span>Mon–Fri 10–8 · Sat–Sun 11–6</span></div>
+        </div>
+
+        <form class="form reveal" id="contact-form" action="#" method="post">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required placeholder="Jordan Doe" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required placeholder="you@domain.com" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="subject">What's it about?</label>
+            <select id="subject" name="subject" required>
+              <option value="">Choose a topic</option>
+              <option value="general">General question</option>
+              <option value="order">Order or reservation</option>
+              <option value="trade">Trade-in or sell</option>
+              <option value="repair">Repair request</option>
+              <option value="partner">Partnership</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Your message</label>
+            <textarea id="message" name="message" required placeholder="Tell us what you're after"></textarea>
+          </div>
+          <button type="submit" class="btn">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="Game Vault Kingston">
+          <p>Kingston's local vault for retro and modern gaming. Buy, sell, trade, repair.</p>
+          <div class="socials">
+            <a href="#" aria-label="WhatsApp"><img src="img/social media icons/social-icon-phone.png" alt=""></a>
+            <a href="#" aria-label="Facebook"><img src="img/social media icons/social-icon-facebook.png" alt=""></a>
+            <a href="#" aria-label="Instagram"><img src="img/social media icons/social-icon-instagram.png" alt=""></a>
+            <a href="#" aria-label="Reddit"><img src="img/social media icons/social-icon-reddit.png" alt=""></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Store hours</h3>
+          <p>Mon–Fri · 10am to 8pm</p>
+          <p>Sat–Sun · 11am to 6pm</p>
+          <h3 style="margin-top:1.5rem;">Visit</h3>
+          <p>1234 Road St, Kingston, ON</p>
+        </div>
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+          <h3 style="margin-top:1.5rem;">Reach us</h3>
+          <a href="mailto:info@gamevaultkingston.com">info@gamevaultkingston.com</a>
+          <a href="tel:+11234567890">(123) 456-7890</a>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© 2025 Game Vault Kingston. All rights reserved.</span>
+        <span>Concept site · Designed in Kingston</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
