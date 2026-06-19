@@ -40,7 +40,11 @@
   <main id="main">
     <!-- ============================ HERO ============================ -->
     <section class="hero">
-      <div class="shell hero__grid">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__slide" style="background-image:url('img/hero-1.jpg')"></div>
+        <div class="hero__slide" style="background-image:url('img/hero-2.jpg')"></div>
+      </div>
+      <div class="shell hero__inner">
         <div class="hero__copy">
           <p class="hero__eyebrow">Kingston, ON · Retro + Modern</p>
           <h1>
@@ -53,15 +57,15 @@
             <a href="#trade" class="btn btn--ghost">Start a trade-in</a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="hero__art">
-          <figure><img src="img/hero-1.jpg" alt="A wall of retro game cartridges and cases"></figure>
-          <figure><img src="img/hero-2.jpg" alt="Close-up of a modern game controller"></figure>
-          <figure class="stat">
-            <b>15+</b>
-            <span>Years collecting &amp; trading in Kingston</span>
-          </figure>
-        </div>
+    <!-- ============================ STATS ============================ -->
+    <section class="section section--tight stats">
+      <div class="shell stats__grid reveal">
+        <div class="stat-item"><b>15+</b><span>Years collecting and trading in Kingston</span></div>
+        <div class="stat-item"><b>5,000+</b><span>Titles passed across the counter</span></div>
+        <div class="stat-item"><b>7 days</b><span>Open every week, walk-ins welcome</span></div>
       </div>
     </section>
 
