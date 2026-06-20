@@ -44,7 +44,7 @@
   --r:        14px;
   --r-lg:     20px;
   --r-pill:   999px;
-  --logo-nav: 3rem;   /* nav logo height — bump this if you want it even larger */
+  --logo-nav: 3.5rem;   /* nav logo height — bump this if you want it even larger */
 
   /* Pixel-stepped corner: the brand "vault notch" signature */
   --notch:    18px;
@@ -189,7 +189,7 @@ ul { list-style: none; }
 /* Accent word inside a headline */
 .accent { color: var(--orange); }
 .mark {
-  background: linear-gradient(transparent 58%, var(--orange) 58%);
+  background: linear-gradient(transparent 58%, var(--cyan) 58%);
   padding-inline: .08em;
 }
 
@@ -245,7 +245,10 @@ ul { list-style: none; }
   background: rgba(244,246,251,.82);
   backdrop-filter: saturate(140%) blur(12px);
   border-bottom: 1px solid var(--line);
+  transition: transform .35s var(--ease);
+  will-change: transform;
 }
+.site-header.is-hidden { transform: translateY(-100%); }
 .site-header__inner {
   display: flex;
   align-items: center;
