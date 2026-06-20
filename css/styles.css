@@ -44,7 +44,7 @@
   --r:        14px;
   --r-lg:     20px;
   --r-pill:   999px;
-  --logo-nav: 6.5rem;   /* nav logo height — bump this if you want it even larger */
+  --logo-nav: 3rem;   /* nav logo height — bump this if you want it even larger */
 
   /* Pixel-stepped corner: the brand "vault notch" signature */
   --notch:    18px;
@@ -405,7 +405,7 @@ p + .btn { margin-top: 1.5rem; }
 /* ============================================================
    7b. STATS BAND
    ============================================================ */
-.stats { background: var(--orange); }
+.stats { background: var(--ink); }
 .stats__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -434,10 +434,9 @@ p + .btn { margin-top: 1.5rem; }
    8. MARQUEE RIBBON
    ============================================================ */
 .ribbon {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--orange);
+  color: var(--white);
   overflow: hidden;
-  border-block: 2px solid var(--orange);
 }
 .ribbon__track {
   display: flex;
@@ -452,7 +451,7 @@ p + .btn { margin-top: 1.5rem; }
   font-size: 1.05rem;
 }
 .ribbon__track span { display: inline-flex; align-items: center; gap: 2.5rem; white-space: nowrap; }
-.ribbon__track span::after { content: "◆"; color: var(--orange); }
+.ribbon__track span::after { content: "◆"; color: var(--white); }
 @keyframes scroll-x { to { transform: translateX(-50%); } }
 .ribbon:hover .ribbon__track { animation-play-state: paused; }
 
