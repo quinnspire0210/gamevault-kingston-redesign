@@ -15,7 +15,7 @@
   <header class="site-header">
     <div class="shell site-header__inner">
       <a class="brand" href="index.html" aria-label="Game Vault Kingston home">
-        <img src="img/logo-dark.png" alt="">
+        <img src="img/logo-mobile.png" alt="">
       </a>
       <nav class="nav" id="nav-menu" aria-label="Primary">
         <ul>
@@ -24,8 +24,27 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="nav__mobile-actions">
+          <a href="#" class="nav__cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            Cart
+          </a>
+          <a href="contact.html" class="btn">Visit the vault</a>
+        </div>
       </nav>
-      <a href="contact.html" class="btn header-cta">Visit the vault</a>
+      <div class="nav-actions">
+        <button class="icon-btn" type="button" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        </button>
+        <button class="icon-btn icon-btn--lang" type="button" aria-label="Language: English">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>EN</span>
+        </button>
+        <a href="contact.html" class="btn header-cta">Visit the vault</a>
+      </div>
       <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -62,23 +81,31 @@
         <div class="product-grid">
           <article class="card reveal">
             <div class="card__media"><img src="img/product-1.jpg" alt="Stack of video game cases"></div>
+            <div class="card__body">
             <h3>Games</h3><p>Retro to brand new across every major platform.</p>
             <div class="card__foot"><span class="price"><span class="from">From</span>$19.89</span><a href="#catalogue" class="btn">View</a></div>
+            </div>
           </article>
           <article class="card reveal">
             <div class="card__media"><img src="img/product-2.jpg" alt="Gaming console"></div>
+            <div class="card__body">
             <h3>Consoles</h3><p>Tested retro systems and current-gen hardware.</p>
             <div class="card__foot"><span class="price"><span class="from">From</span>$25.99</span><a href="#catalogue" class="btn">View</a></div>
+            </div>
           </article>
           <article class="card reveal">
             <div class="card__media"><img src="img/product-3.jpg" alt="Gaming collectible figures"></div>
+            <div class="card__body">
             <h3>Collectibles</h3><p>Figures, merch, and display pieces for fans.</p>
             <div class="card__foot"><span class="price"><span class="from">From</span>$42.99</span><a href="#catalogue" class="btn">View</a></div>
+            </div>
           </article>
           <article class="card reveal">
             <div class="card__media"><img src="img/product-4.jpg" alt="Gaming accessories"></div>
+            <div class="card__body">
             <h3>Accessories</h3><p>Controllers, cables, and everything to finish the setup.</p>
             <div class="card__foot"><span class="price"><span class="from">From</span>$15.99</span><a href="#catalogue" class="btn">View</a></div>
+            </div>
           </article>
         </div>
       </div>
