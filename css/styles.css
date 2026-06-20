@@ -44,7 +44,7 @@
   --r:        14px;
   --r-lg:     20px;
   --r-pill:   999px;
-  --logo-nav: 6.5rem;   /* nav logo height — bump this if you want it even larger */
+  --logo-nav: 2rem;   /* nav logo height — bump this if you want it even larger */
 
   /* Pixel-stepped corner: the brand "vault notch" signature */
   --notch:    18px;
