@@ -189,7 +189,7 @@ ul { list-style: none; }
 /* Accent word inside a headline */
 .accent { color: var(--orange); }
 .mark {
-  background: linear-gradient(transparent 58%, var(--cyan) 58%);
+  background: linear-gradient(transparent 58%, var(--orange) 58%);
   padding-inline: .08em;
 }
 
