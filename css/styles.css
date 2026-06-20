@@ -4,7 +4,7 @@
    Display: Tektur | Body: Space Grotesk | Data/tags: Space Mono
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 /* ============================================================
    1. DESIGN TOKENS
@@ -27,7 +27,7 @@
   /* Type */
   --font-display: 'Tektur', system-ui, sans-serif;
   --font-body:    'Outfit', system-ui, sans-serif;
-  --font-mono:    'Space Mono', ui-monospace, monospace;
+  --font-mono:    'Outfit', system-ui, sans-serif;   /* labels/price/nav now use Outfit */
 
   /* Fluid type scale — mobile bounds unchanged, desktop ~+50% */
   --fs-hero:  clamp(3.2rem, 11vw, 9.5rem);
@@ -171,14 +171,14 @@ ul { list-style: none; }
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: var(--white);
   background: var(--orange);
   padding: .4rem .8rem;
   border-radius: 4px;
   margin-bottom: 1.25rem;
 }
 .tag::before { content: "▸"; font-size: .7em; }
-.tag--cyan { background: var(--cyan); }
+.tag--cyan { background: var(--cyan); color: var(--ink); }
 .tag--ghost {
   background: transparent;
   color: var(--muted);
@@ -480,7 +480,7 @@ p + .btn { margin-top: 1.5rem; }
 .card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hi); }
 .card__media { border-radius: calc(var(--r) - 2px); overflow: hidden; aspect-ratio: 4/3; background: var(--paper-2); margin-bottom: 1.5rem; }
 .card__media img { width: 100%; height: 100%; object-fit: cover; }
-.card h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: .6rem; }
+.card h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 1.15rem; }
 .card p { color: var(--muted); font-size: .98rem; margin-bottom: 2.25rem; }
 .card__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.1rem 1.25rem; margin-top: auto; }
 .price {
@@ -538,7 +538,7 @@ p + .btn { margin-top: 1.5rem; }
   font-family: var(--font-mono); font-weight: 700; font-size: 1.3rem;
   margin-bottom: 1.25rem; transition: background .25s, color .25s;
 }
-.svc h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: .6rem; }
+.svc h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.15rem; }
 .svc p { color: var(--muted); font-size: .96rem; }
 
 /* ============================================================
@@ -605,7 +605,7 @@ p + .btn { margin-top: 1.5rem; }
 .drop h3 { font-size: 1.4rem; font-weight: 700; }
 .drop p { color: var(--muted); font-size: .96rem; }
 .drop--featured { border-color: var(--orange); border-width: 2px; }
-.drop--featured .drop__label { background: var(--orange); }
+.drop--featured .drop__label { background: var(--orange); color: var(--white); }
 @media (min-width: 900px) { .drop--featured { grid-row: span 1; transform: translateY(-14px); } }
 
 /* ============================================================
@@ -791,6 +791,34 @@ p + .btn { margin-top: 1.5rem; }
 .value h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: .6rem; }
 .value p { color: var(--muted); font-size: .96rem; }
 
+/* Store showcase image (about page) */
+.showcase img { width: 100%; aspect-ratio: 16 / 8; object-fit: cover; border-radius: var(--r-lg); box-shadow: var(--shadow); display: block; }
+.showcase figcaption { margin-top: 1.35rem; color: var(--muted); font-size: var(--fs-lead); max-width: 64ch; }
+@media (max-width: 640px) { .showcase img { aspect-ratio: 4 / 3.2; } }
+
+/* Newsletter */
+.newsletter__card {
+  background: var(--navy); color: var(--white);
+  border-radius: var(--r-lg);
+  padding: clamp(2.5rem, 5vw, 4.5rem);
+  display: grid; gap: 2.25rem; align-items: center;
+}
+@media (min-width: 880px) { .newsletter__card { grid-template-columns: 1.1fr .9fr; gap: 4rem; } }
+.newsletter__card h2 { color: var(--white); font-size: var(--fs-h2); font-weight: 700; }
+.newsletter__card p { color: rgba(255,255,255,.78); margin-top: .9rem; max-width: 44ch; }
+.news-form { display: flex; flex-wrap: wrap; gap: 1rem; }
+.news-form input {
+  flex: 1 1 240px; min-width: 0;
+  font-family: var(--font-body); font-size: 1.1rem;
+  padding: 1.05rem 1.2rem; color: var(--white);
+  background: rgba(255,255,255,.07);
+  border: 2px solid rgba(255,255,255,.22); border-radius: 0;
+  transition: border-color .2s, box-shadow .2s;
+}
+.news-form input::placeholder { color: rgba(255,255,255,.5); }
+.news-form input:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255,76,36,.25); }
+.news-form .btn { white-space: nowrap; }
+
 /* ============================================================
    20. FOOTER
    ============================================================ */
@@ -803,15 +831,16 @@ p + .btn { margin-top: 1.5rem; }
 .footer-col p, .footer-col a { color: rgba(255,255,255,.7); font-size: .92rem; display: block; margin-bottom: .5rem; }
 .footer-col a { font-family: var(--font-mono); letter-spacing: .04em; transition: color .2s; }
 .footer-col a:hover { color: var(--orange); }
-.socials { display: flex; align-items: center; gap: .85rem; margin-top: 1.5rem; }
+.socials { display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem; }
 .socials a {
-  width: 48px; height: 48px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
+  width: 56px; height: 56px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  line-height: 0;
   background: rgba(255,255,255,.08);
   transition: background .2s, transform .2s;
 }
 .socials a:hover { background: var(--orange); transform: translateY(-3px); }
-.socials img { width: 22px; height: 22px; object-fit: contain; display: block; }
+.socials img { width: 26px; height: 26px; object-fit: contain; display: block; margin: 0; }
 .footer-base {
   margin-top: 3rem; padding-top: 1.5rem;
   border-top: 1px solid var(--line-dk);
