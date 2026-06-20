@@ -84,61 +84,113 @@
       </div>
     </section>
 
-    <!-- CATALOGUE LIST -->
-    <section class="section section--paper2" id="catalogue">
+    <!-- ALL GAMES -->
+    <section class="section section--paper2" id="games">
       <div class="shell">
         <div class="sec-head sec-head--split reveal">
           <div>
-            <span class="tag tag--cyan">Live inventory</span>
-            <h2>Games catalogue</h2>
+            <span class="tag tag--cyan">In stock</span>
+            <h2>All games</h2>
           </div>
-          <p class="lede">A snapshot of what's on the shelves this week. In-store quantities change fast.</p>
+          <p class="lede">Browse the full shelf of new releases, indies, and retro favourites. In-store quantities change weekly.</p>
         </div>
-
-        <div class="filters reveal" role="group" aria-label="Filter catalogue">
-          <button class="chip" data-filter="all" aria-pressed="true">All</button>
-          <button class="chip" data-filter="retro" aria-pressed="false">Retro</button>
-          <button class="chip" data-filter="modern" aria-pressed="false">Modern</button>
-          <button class="chip" data-filter="console" aria-pressed="false">Consoles</button>
-        </div>
-
-        <div class="catalogue reveal">
-          <div class="cat-row" data-cat="modern">
-            <h3>The Last of Us II Remaster</h3>
-            <div class="cat-meta"><b>Genre</b>Adventure / Shooter</div>
-            <div class="cat-meta"><b>Platform</b>PS5</div>
-            <span class="price">$49.99</span>
-          </div>
-          <div class="cat-row" data-cat="modern">
-            <h3>Assassin's Creed Shadows</h3>
-            <div class="cat-meta"><b>Genre</b>Action / RPG</div>
-            <div class="cat-meta"><b>Platform</b>PS5 · Xbox · PC</div>
-            <span class="price">$59.99</span>
-          </div>
-          <div class="cat-row" data-cat="retro">
-            <h3>Sonic X Shadow Generations</h3>
-            <div class="cat-meta"><b>Genre</b>Platformer</div>
-            <div class="cat-meta"><b>Platform</b>Switch</div>
-            <span class="price">$34.99</span>
-          </div>
-          <div class="cat-row" data-cat="modern">
-            <h3>Final Fantasy VII Rebirth</h3>
-            <div class="cat-meta"><b>Genre</b>Action / RPG</div>
-            <div class="cat-meta"><b>Platform</b>PS5 · PC</div>
-            <span class="price">$54.99</span>
-          </div>
-          <div class="cat-row" data-cat="retro">
-            <h3>Stray</h3>
-            <div class="cat-meta"><b>Genre</b>Adventure</div>
-            <div class="cat-meta"><b>Platform</b>Multi</div>
-            <span class="price">$24.99</span>
-          </div>
-          <div class="cat-row" data-cat="console">
-            <h3>Retro Console Bundle</h3>
-            <div class="cat-meta"><b>Type</b>Tested hardware</div>
-            <div class="cat-meta"><b>Includes</b>2 controllers</div>
-            <span class="price">$129.99</span>
-          </div>
+        <div class="games-grid">
+          <a class="game-card reveal" href="#" data-genre="family">
+            <div class="game-card__media"><img src="img/games/game-1.png" alt="Slime Rancher box art" loading="lazy"></div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Slime Rancher</h3>
+              <div class="game-card__tags"><span>Family</span><span>Simulation</span></div>
+              <span class="game-card__price">$24.99</span>
+            </div>
+          </a>
+          <a class="game-card reveal" href="#" data-genre="action">
+            <div class="game-card__media"><img src="img/games/game-2.png" alt="Echoes of the Ancients box art" loading="lazy"></div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Echoes of the Ancients</h3>
+              <div class="game-card__tags"><span>Action</span><span>Adventure</span></div>
+              <span class="game-card__price">$69.99</span>
+            </div>
+          </a>
+          <a class="game-card reveal" href="#" data-genre="action">
+            <div class="game-card__media"><img src="img/games/game-3.png" alt="Neon Drifter box art" loading="lazy"></div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Neon Drifter</h3>
+              <div class="game-card__tags"><span>Action</span><span>RPG</span></div>
+              <span class="game-card__price">$59.99</span>
+            </div>
+          </a>
+          <a class="game-card reveal" href="#" data-genre="family">
+            <div class="game-card__media"><img src="img/games/game-4.png" alt="My Little Homestead box art" loading="lazy"></div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">My Little Homestead</h3>
+              <div class="game-card__tags"><span>Simulation</span><span>Family</span></div>
+              <span class="game-card__price">$29.99</span>
+            </div>
+          </a>
+          <a class="game-card reveal" href="#" data-genre="adventure">
+            <div class="game-card__media"><img src="img/games/game-5.png" alt="Beyond Horizon box art" loading="lazy"></div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Beyond Horizon</h3>
+              <div class="game-card__tags"><span>Sci-Fi</span><span>Adventure</span></div>
+              <span class="game-card__price">$64.99</span>
+            </div>
+          </a>
+          <a class="game-card reveal" href="#" data-genre="family">
+            <div class="game-card__media"><img src="img/games/game-6.png" alt="Puzzle Pop! box art" loading="lazy"></div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Puzzle Pop!</h3>
+              <div class="game-card__tags"><span>Puzzle</span><span>Casual</span></div>
+              <span class="game-card__price">$19.99</span>
+            </div>
+          </a>
+          <a class="game-card reveal" href="#" data-genre="adventure">
+            <div class="game-card__media"><img src="img/games/game-7.png" alt="Shadow Bound box art" loading="lazy"></div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Shadow Bound</h3>
+              <div class="game-card__tags"><span>Adventure</span><span>Platformer</span></div>
+              <span class="game-card__price">$39.99</span>
+            </div>
+          </a>
+          <a class="game-card reveal" href="#" data-genre="action">
+            <div class="game-card__media"><img src="img/games/game-8.png" alt="Gear Shift box art" loading="lazy"></div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Gear Shift</h3>
+              <div class="game-card__tags"><span>Racing</span><span>Action</span></div>
+              <span class="game-card__price">$49.99</span>
+            </div>
+          </a>
+          <a class="game-card reveal" href="#" data-genre="family">
+            <div class="game-card__media"><img src="img/games/game-9.png" alt="Little Wizard Tales box art" loading="lazy"></div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Little Wizard Tales</h3>
+              <div class="game-card__tags"><span>Adventure</span><span>Family</span></div>
+              <span class="game-card__price">$34.99</span>
+            </div>
+          </a>
+          <a class="game-card reveal" href="#" data-genre="simulation">
+            <div class="game-card__media"><img src="img/games/game-10.png" alt="Football Manager 25 box art" loading="lazy"></div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Football Manager 25</h3>
+              <div class="game-card__tags"><span>Sports</span><span>Simulation</span></div>
+              <span class="game-card__price">$54.99</span>
+            </div>
+          </a>
+          <a class="game-card reveal" href="#" data-genre="simulation">
+            <div class="game-card__media"><img src="img/games/game-11.png" alt="Tasty Tycoon box art" loading="lazy"></div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Tasty Tycoon</h3>
+              <div class="game-card__tags"><span>Simulation</span><span>Casual</span></div>
+              <span class="game-card__price">$27.99</span>
+            </div>
+          </a>
+          <a class="game-card reveal" href="#" data-genre="adventure">
+            <div class="game-card__media"><img src="img/games/game-12.png" alt="Waves of Discovery box art" loading="lazy"></div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Waves of Discovery</h3>
+              <div class="game-card__tags"><span>Adventure</span><span>Exploration</span></div>
+              <span class="game-card__price">$44.99</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
