@@ -44,7 +44,7 @@
   --r:        14px;
   --r-lg:     20px;
   --r-pill:   999px;
-  --logo-nav: 3rem;   /* nav logo height — bump this if you want it even larger */
+  --logo-nav: 6.5rem;   /* nav logo height — bump this if you want it even larger */
 
   /* Pixel-stepped corner: the brand "vault notch" signature */
   --notch:    18px;
@@ -305,7 +305,7 @@ ul { list-style: none; }
   position: absolute;
   top: 100%; left: 0; right: 0;
   background: var(--ink);
-  padding: 2rem var(--gut) 2rem;
+  padding: 1.5rem var(--gut) 2rem;
   display: none;
 }
 .nav.is-open { display: block; }
@@ -418,15 +418,15 @@ p + .btn { margin-top: 1.5rem; }
   font-weight: 700;
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: .9;
-  color: var(--ink);
+  color: var(--white);
 }
 .stat-item span {
   font-family: var(--font-mono);
   font-size: var(--fs-tag);
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--ink);
-  opacity: .72;
+  color: var(--white);
+  opacity: .85;
   max-width: 26ch;
 }
 
@@ -482,7 +482,7 @@ p + .btn { margin-top: 1.5rem; }
 .card__media img { width: 100%; height: 100%; object-fit: cover; }
 .card h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 1.15rem; }
 .card p { color: var(--muted); font-size: .98rem; margin-bottom: 2.25rem; }
-.card__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.1rem 1.25rem; margin-top: auto; }
+.card__foot { margin-top: auto; display: flex; flex-direction: column; align-items: stretch; gap: 1.1rem; }
 .price {
   font-family: var(--font-mono);
   font-weight: 700;
@@ -490,6 +490,7 @@ p + .btn { margin-top: 1.5rem; }
   color: var(--ink);
 }
 .price .from { font-size: .55em; color: var(--muted); display: block; letter-spacing: .12em; text-transform: uppercase; }
+.card .btn { width: 100%; justify-content: center; }
 /* View button uses full primary .btn sizing */
 
 /* ============================================================
@@ -531,7 +532,7 @@ p + .btn { margin-top: 1.5rem; }
 .svc:hover { transform: translateY(-8px); background: var(--ink); color: var(--paper); box-shadow: var(--shadow-hi); }
 .svc:hover h3 { color: var(--white); }
 .svc:hover p { color: rgba(255,255,255,.78); }
-.svc:hover .svc__mark { background: var(--orange); color: var(--ink); }
+.svc:hover .svc__mark { background: var(--orange); color: var(--white); }
 .svc__mark {
   width: 3rem; height: 3rem; display: grid; place-items: center;
   border-radius: 12px; background: var(--paper-2); color: var(--orange);
@@ -632,11 +633,11 @@ p + .btn { margin-top: 1.5rem; }
 /* ============================================================
    15. CTA BAND — the boldness showpiece
    ============================================================ */
-.cta-band { background: var(--orange); color: var(--ink); }
+.cta-band { background: var(--orange); color: var(--white); }
 .cta-band .shell { padding-block: clamp(3.5rem, 7vw, 6rem); }
 .cta-band__inner { display: grid; gap: 2rem; align-items: center; }
 @media (min-width: 880px) { .cta-band__inner { grid-template-columns: 1.4fr auto; } }
-.cta-band h2 { font-size: clamp(2.2rem, 5.5vw, 4.5rem); font-weight: 700; line-height: .92; }
+.cta-band h2 { font-size: clamp(2.2rem, 5.5vw, 4.5rem); font-weight: 700; line-height: .92; color: var(--white); }
 .cta-band__meta {
   font-family: var(--font-mono); font-weight: 700; font-size: .8rem;
   letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1rem;
@@ -818,6 +819,47 @@ p + .btn { margin-top: 1.5rem; }
 .news-form input::placeholder { color: rgba(255,255,255,.5); }
 .news-form input:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255,76,36,.25); }
 .news-form .btn { white-space: nowrap; }
+
+/* Section head action (e.g. See all) */
+.sec-head__action { display: flex; align-items: flex-end; }
+@media (min-width: 880px) { .sec-head--split .sec-head__action { justify-content: flex-end; } }
+
+/* ===== GAME CARDS (featured games / shop) ===== */
+.games-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 560px) { .games-grid { grid-template-columns: repeat(2,1fr); gap: 1.75rem; } }
+@media (min-width: 1024px){ .games-grid { grid-template-columns: repeat(4,1fr); gap: 2rem; } }
+
+.game-card {
+  display: flex; flex-direction: column;
+  background: var(--card); border-radius: var(--r-lg); overflow: hidden;
+  box-shadow: var(--shadow); color: var(--ink);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.game-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hi); }
+.game-card__media { aspect-ratio: 3 / 4; overflow: hidden; background: var(--paper-2); }
+.game-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s var(--ease); }
+.game-card:hover .game-card__media img { transform: scale(1.05); }
+.game-card__body { padding: clamp(1.15rem, 1.6vw, 1.6rem); display: flex; flex-direction: column; gap: .8rem; flex: 1; }
+.game-card__title { font-size: clamp(1.2rem, 1vw + .9rem, 1.65rem); font-weight: 700; line-height: 1.05; }
+.game-card__tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+.game-card__tags span {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: clamp(.8rem, .3vw + .7rem, 1rem);
+  color: var(--muted); background: var(--paper-2);
+  padding: .28rem .7rem; border-radius: var(--r-pill);
+}
+.game-card__price {
+  margin-top: auto; padding-top: .5rem;
+  font-weight: 700; color: var(--ink);
+  font-size: clamp(1.2rem, .5vw + 1rem, 1.55rem);
+}
+.game-card__price .free { color: var(--cyan); }
+
+/* ===== GAME OF THE DAY ===== */
+.gotd__banner { display: block; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-hi); }
+.gotd__banner img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; transition: transform .5s var(--ease); }
+.gotd__banner:hover img { transform: scale(1.03); }
+@media (max-width: 600px) { .gotd__banner img { aspect-ratio: 4 / 3; } }
 
 /* ============================================================
    20. FOOTER
