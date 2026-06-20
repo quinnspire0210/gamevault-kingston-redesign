@@ -34,12 +34,12 @@
   --fs-h2:    clamp(2.4rem, 6.5vw, 6rem);
   --fs-h3:    clamp(1.35rem, 1.2vw + 1rem, 2.7rem);
   --fs-body:  clamp(1rem, 0.55vw + 0.92rem, 1.5rem);
-  --fs-lead:  clamp(1.05rem, 0.9vw + 0.95rem, 1.85rem);
-  --fs-tag:   clamp(0.78rem, 0.35vw + 0.7rem, 1.15rem);
+  --fs-lead:  clamp(1.1rem, 0.95vw + 0.95rem, 2.05rem);
+  --fs-tag:   clamp(0.85rem, 0.45vw + 0.72rem, 1.4rem);
 
   /* Spacing + shape */
-  --shell:    1500px;
-  --gut:      clamp(1.25rem, 2.6vw, 2.25rem);
+  --shell:    1640px;
+  --gut:      clamp(1rem, 1.5vw, 1.35rem);
   --sec-y:    clamp(4.5rem, 9vw, 9rem);
   --r:        14px;
   --r-lg:     20px;
@@ -204,10 +204,10 @@ ul { list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: .7rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(.9rem, 0.3vw + .82rem, 1.15rem);
-  letter-spacing: .06em;
+  font-size: clamp(.95rem, 0.35vw + .85rem, 1.25rem);
+  letter-spacing: .03em;
   text-transform: uppercase;
   background: var(--btn-bg);
   color: var(--btn-fg);
@@ -250,10 +250,10 @@ ul { list-style: none; }
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-block: .85rem;
+  padding-block: .55rem;
 }
 .brand { display: inline-flex; align-items: center; gap: .65rem; }
-.brand img { height: 2.4rem; width: auto; }
+.brand img { height: 4.6rem; width: auto; }
 .brand__type {
   font-family: var(--font-display);
   font-weight: 700;
@@ -350,11 +350,11 @@ ul { list-style: none; }
   content: "";
   position: absolute; inset: 0; z-index: -1;
   background: linear-gradient(100deg,
-      var(--paper) 0%, var(--paper) 30%,
-      rgba(244,246,251,.86) 48%, rgba(244,246,251,.35) 70%, rgba(244,246,251,.05) 100%);
+      rgba(15,17,34,.94) 0%, rgba(15,17,34,.9) 32%,
+      rgba(15,17,34,.78) 50%, rgba(15,17,34,.5) 72%, rgba(15,17,34,.28) 100%);
 }
 @media (max-width: 760px) {
-  .hero::before { background: linear-gradient(180deg, rgba(244,246,251,.92), rgba(244,246,251,.74)); }
+  .hero::before { background: linear-gradient(180deg, rgba(15,17,34,.9), rgba(15,17,34,.74)); }
 }
 
 .hero__inner { width: 100%; padding-block: clamp(3rem, 7vw, 5rem); }
@@ -366,7 +366,7 @@ ul { list-style: none; }
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: rgba(255,255,255,.85);
   margin-bottom: 1.25rem;
 }
 .hero h1 {
@@ -374,6 +374,7 @@ ul { list-style: none; }
   font-weight: 700;
   line-height: 0.86;
   letter-spacing: -0.02em;
+  color: var(--white);
 }
 .hero h1 .line2 { display: block; }
 /* "VAULT" sits on an orange pixel block */
@@ -389,7 +390,7 @@ ul { list-style: none; }
   margin-top: 1.75rem;
   max-width: 46ch;
   font-size: var(--fs-lead);
-  color: var(--ink);
+  color: rgba(255,255,255,.9);
 }
 .hero__actions { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 1.25rem; }
 
@@ -402,7 +403,7 @@ ul { list-style: none; }
 /* ============================================================
    7b. STATS BAND
    ============================================================ */
-.stats { background: var(--paper-2); }
+.stats { background: var(--orange); }
 .stats__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -415,18 +416,17 @@ ul { list-style: none; }
   font-weight: 700;
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: .9;
-  color: var(--orange);
+  color: var(--ink);
 }
 .stat-item span {
   font-family: var(--font-mono);
   font-size: var(--fs-tag);
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ink);
+  opacity: .72;
   max-width: 26ch;
 }
-.stat-item:nth-child(2) b { color: var(--navy); }
-.stat-item:nth-child(3) b { color: var(--cyan); }
 
 /* ============================================================
    8. MARQUEE RIBBON
@@ -530,7 +530,8 @@ ul { list-style: none; }
   transition: transform .25s var(--ease), background .25s, color .25s, box-shadow .25s;
 }
 .svc:hover { transform: translateY(-8px); background: var(--ink); color: var(--paper); box-shadow: var(--shadow-hi); }
-.svc:hover p { color: rgba(255,255,255,.75); }
+.svc:hover h3 { color: var(--white); }
+.svc:hover p { color: rgba(255,255,255,.78); }
 .svc:hover .svc__mark { background: var(--orange); color: var(--ink); }
 .svc__mark {
   width: 3rem; height: 3rem; display: grid; place-items: center;
@@ -550,10 +551,10 @@ ul { list-style: none; }
 @media (min-width: 960px) { .process__grid { grid-template-columns: 0.85fr 1.15fr; align-items: start; } }
 .process__intro h2 { color: var(--white); font-size: var(--fs-h2); font-weight: 700; margin-bottom: 1.25rem; }
 .process__intro p { color: rgba(255,255,255,.78); max-width: 40ch; margin-bottom: 2rem; }
-.process__visual { display: flex; gap: .75rem; flex-wrap: wrap; }
+.process__visual { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 2.5rem; }
 .process__visual img {
-  width: clamp(64px, 9vw, 96px); height: auto; border-radius: 12px;
-  background: rgba(255,255,255,.06); padding: .5rem;
+  width: clamp(58px, 6vw, 76px); aspect-ratio: 1; object-fit: contain; border-radius: 14px;
+  background: var(--orange); padding: 1.15rem;
 }
 
 .steps { display: grid; gap: 0; }
@@ -690,12 +691,53 @@ ul { list-style: none; }
 /* ============================================================
    17. PAGE HEADER (inner pages)
    ============================================================ */
-.page-head { background: var(--paper-2); border-bottom: 1px solid var(--line); }
+.page-head { background: var(--ink); border-bottom: none; }
 .page-head .shell { padding-block: clamp(3rem, 6vw, 5.5rem); }
-.page-head h1 { font-size: clamp(2.6rem, 7vw, 6rem); font-weight: 700; }
-.page-head p { color: var(--muted); font-size: var(--fs-lead); max-width: 48ch; margin-top: 1rem; }
-.crumbs { font-family: var(--font-mono); font-size: .76rem; letter-spacing: .1em; color: var(--muted); margin-bottom: 1rem; text-transform: uppercase; }
+.page-head h1 { font-size: clamp(2.6rem, 7vw, 6rem); font-weight: 700; color: var(--white); }
+.page-head p { color: rgba(255,255,255,.82); font-size: var(--fs-lead); max-width: 48ch; margin-top: 1rem; }
+.crumbs { font-family: var(--font-mono); font-size: .76rem; letter-spacing: .1em; color: rgba(255,255,255,.6); margin-bottom: 1rem; text-transform: uppercase; }
 .crumbs a:hover { color: var(--orange); }
+
+/* layout: title on the left, vault readout on the right */
+.page-head__inner { display: grid; gap: 2.5rem; }
+@media (min-width: 920px) {
+  .page-head__inner { grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: clamp(3rem,5vw,6rem); }
+}
+.page-head__lead { min-width: 0; }
+
+/* vault readout panel */
+.page-head__panel {
+  --notch: 14px;
+  background: rgba(255,255,255,.055);
+  clip-path: var(--pixel-clip);
+  padding: clamp(1.6rem, 2vw, 2.1rem) clamp(1.6rem, 2vw, 2.35rem);
+  width: min(360px, 100%);
+  display: flex; flex-direction: column; gap: 1.35rem;
+}
+.panel__kicker {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-family: var(--font-mono); font-weight: 700;
+  font-size: var(--fs-tag); letter-spacing: .12em; text-transform: uppercase;
+  color: var(--orange);
+}
+.panel__kicker::before { content: "▸"; font-size: .8em; }
+.panel__figure b {
+  display: block;
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(2.6rem, 4vw, 3.5rem); line-height: .88; color: var(--cyan);
+}
+.panel__figure span {
+  font-family: var(--font-mono); font-size: var(--fs-tag);
+  letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.6);
+}
+.panel__rows { display: flex; flex-direction: column; }
+.panel__rows li {
+  display: flex; justify-content: space-between; gap: 1.5rem;
+  padding: .7rem 0; border-top: 1px solid rgba(255,255,255,.14);
+  font-family: var(--font-mono); font-size: clamp(.82rem, 0.3vw + .72rem, 1.05rem);
+}
+.panel__rows .k { color: rgba(255,255,255,.55); letter-spacing: .04em; text-transform: uppercase; }
+.panel__rows .v { color: var(--white); text-align: right; }
 
 /* ============================================================
    18. SHOP — catalogue list
@@ -747,21 +789,21 @@ ul { list-style: none; }
 .site-footer { background: var(--ink); color: var(--paper); padding-block: clamp(3.5rem,6vw,5rem) 2rem; }
 .footer-grid { display: grid; gap: 2.5rem; grid-template-columns: 1fr; }
 @media (min-width: 760px) { .footer-grid { grid-template-columns: 1.6fr 1fr 1fr; } }
-.footer-brand img { height: 2.6rem; width: auto; margin-bottom: 1.25rem; }
+.footer-brand img { height: 5.2rem; width: auto; margin-bottom: 1.5rem; }
 .footer-brand p { color: rgba(255,255,255,.62); max-width: 34ch; font-size: .95rem; }
 .footer-col h3 { font-size: 1rem; color: var(--white); margin-bottom: 1.1rem; letter-spacing: .04em; }
 .footer-col p, .footer-col a { color: rgba(255,255,255,.7); font-size: .92rem; display: block; margin-bottom: .5rem; }
 .footer-col a { font-family: var(--font-mono); letter-spacing: .04em; transition: color .2s; }
 .footer-col a:hover { color: var(--orange); }
-.socials { display: flex; gap: .85rem; margin-top: 1.25rem; }
+.socials { display: flex; align-items: center; gap: .85rem; margin-top: 1.5rem; }
 .socials a {
-  width: 40px; height: 40px; border-radius: 50%;
-  display: grid; place-items: center;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
   background: rgba(255,255,255,.08);
   transition: background .2s, transform .2s;
 }
 .socials a:hover { background: var(--orange); transform: translateY(-3px); }
-.socials img { width: 18px; height: 18px; }
+.socials img { width: 22px; height: 22px; object-fit: contain; display: block; }
 .footer-base {
   margin-top: 3rem; padding-top: 1.5rem;
   border-top: 1px solid var(--line-dk);
@@ -790,39 +832,39 @@ ul { list-style: none; }
   .step h3     { font-size: 2.25rem; }
   .value h3    { font-size: 2rem; }
   .cat-row h3  { font-size: 1.85rem; }
-  .footer-col h3 { font-size: 1.4rem; }
-  .quote__who b  { font-size: 1.3rem; }
+  .footer-col h3 { font-size: 1.55rem; }
+  .quote__who b  { font-size: 1.45rem; }
 
-  /* mono labels */
-  .nav a            { font-size: 1.02rem; }
-  .price            { font-size: 1.45rem; }
-  .about__badge     { font-size: .95rem; }
-  .step__no         { font-size: 1.3rem; }
-  .drop__label      { font-size: .95rem; }
-  .quote__stars     { font-size: 1.3rem; }
-  .quote__who span  { font-size: .95rem; }
-  .cta-band__meta   { font-size: 1.05rem; }
-  .contact__detail  { font-size: 1.2rem; }
-  .field label      { font-size: 1rem; }
-  .crumbs           { font-size: .95rem; }
-  .chip             { font-size: 1.05rem; }
-  .cat-meta         { font-size: 1.1rem; }
-  .footer-base      { font-size: .95rem; }
-  .footer-col p, .footer-col a { font-size: 1.2rem; }
-  .footer-brand p   { font-size: 1.25rem; }
-  .ribbon__track    { font-size: 1.5rem; }
+  /* mono labels — larger */
+  .nav a            { font-size: 1.18rem; }
+  .price            { font-size: 1.6rem; }
+  .about__badge     { font-size: 1.1rem; }
+  .step__no         { font-size: 1.45rem; }
+  .drop__label      { font-size: 1.1rem; }
+  .quote__stars     { font-size: 1.45rem; }
+  .quote__who span  { font-size: 1.1rem; }
+  .cta-band__meta   { font-size: 1.2rem; }
+  .contact__detail  { font-size: 1.35rem; }
+  .field label      { font-size: 1.15rem; }
+  .crumbs           { font-size: 1.1rem; }
+  .chip             { font-size: 1.2rem; }
+  .cat-meta         { font-size: 1.25rem; }
+  .footer-base      { font-size: 1.1rem; }
+  .footer-col p, .footer-col a { font-size: 1.35rem; }
+  .footer-brand p   { font-size: 1.4rem; }
+  .ribbon__track    { font-size: 1.6rem; }
 
-  /* paragraphs inside cards */
-  .card p, .svc p, .drop p, .quote p, .value p { font-size: 1.3rem; }
+  /* secondary paragraphs inside cards */
+  .card p, .svc p, .drop p, .quote p, .value p { font-size: 1.4rem; }
 
   /* service marker chip */
   .svc__mark { width: 3.75rem; height: 3.75rem; font-size: 1.7rem; }
 
   /* form controls */
-  .field input, .field select, .field textarea { font-size: 1.25rem; padding: 1rem 1.15rem; }
+  .field input, .field select, .field textarea { font-size: 1.3rem; padding: 1.05rem 1.2rem; }
 }
 
 @media (min-width: 1200px) {
-  .card p, .svc p, .drop p, .quote p, .value p { font-size: 1.4rem; }
-  .price { font-size: 1.6rem; }
+  .card p, .svc p, .drop p, .quote p, .value p { font-size: 1.5rem; }
+  .price { font-size: 1.75rem; }
 }
