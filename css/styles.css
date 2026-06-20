@@ -242,7 +242,7 @@ ul { list-style: none; }
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(21,23,46,.9);
+  background: var(--ink);
   backdrop-filter: saturate(140%) blur(12px);
   border-bottom: 1px solid rgba(255,255,255,.1);
   transition: transform .35s var(--ease);
