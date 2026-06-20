@@ -21,6 +21,33 @@
     });
   }
 
+  /* ---- Smart header: hide on scroll down, show on scroll up ---- */
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var lastY = window.scrollY || 0;
+    var ticking = false;
+    var DELTA = 6;     // ignore tiny scrolls (jitter)
+    var TOP_ZONE = 120; // always show near the top
+    function updateHeader() {
+      var y = window.scrollY || 0;
+      var menuOpen = nav && nav.classList.contains('is-open');
+      if (Math.abs(y - lastY) > DELTA && !menuOpen) {
+        if (y > lastY && y > TOP_ZONE) {
+          header.classList.add('is-hidden');   // scrolling down
+        } else {
+          header.classList.remove('is-hidden'); // scrolling up
+        }
+        lastY = y;
+      } else if (y <= TOP_ZONE) {
+        header.classList.remove('is-hidden');
+      }
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { window.requestAnimationFrame(updateHeader); ticking = true; }
+    }, { passive: true });
+  }
+
   /* ---- Scroll reveal ---- */
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && reveals.length) {
